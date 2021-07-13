@@ -1,0 +1,14 @@
+{
+	"version": 3,
+	"file": "main.css",
+	"sources": [
+		"main.scss",
+		"src/_sass/main.scss"
+	],
+	"sourcesContent": [
+		"@import \"main.scss\";",
+		"body {\n  padding-top: 60px;\n  padding-bottom: 80px;\n  background-color: #000000;\n  background-image: url(\"https://www.transparenttextures.com/patterns/pinstripe-light.png\");\n  background-position: center;\n  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */\n}\n\nh1{\n  border-bottom: 1px solid #174058;\n  margin-bottom: 40px;\n}\n#primary-navigation {\n  background-color: #174058;\n}\n\n#site-aside {\n  & > section {\n    padding: 20px;\n    border-bottom: 2px solid #999;\n  }\n}\n\n// AsciiDoc Styling\n\n.sect1 {\n  padding: 20px;\n  margin-bottom: 40px;\n  border-bottom: 1px dotted #ccc;\n\n}\n\n.sect2 {\n  padding: 20px;\n  margin-bottom: 20px;\n  border-left: 1px dashed #ccc;\n}\n\n"
+	],
+	"names": [],
+	"mappings": "ACAA,AAAA,IAAI,AAAC,CACH,WAAW,CAAE,IAAI,CACjB,cAAc,CAAE,IAAI,CACpB,gBAAgB,CAAE,OAAO,CACzB,gBAAgB,CAAE,uEAAuE,CACzF,mBAAmB,CAAE,MAAM,CAE5B,AAED,AAAA,EAAE,AAAA,CACA,aAAa,CAAE,iBAAiB,CAChC,aAAa,CAAE,IAAI,CACpB,AACD,AAAA,mBAAmB,AAAC,CAClB,gBAAgB,CAAE,OAAO,CAC1B,AAED,AACE,WADS,CACL,OAAO,AAAC,CACV,OAAO,CAAE,IAAI,CACb,aAAa,CAAE,cAAc,CAC9B,AAKH,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,IAAI,CACb,aAAa,CAAE,IAAI,CACnB,aAAa,CAAE,eAAe,CAE/B,AAED,AAAA,MAAM,AAAC,CACL,OAAO,CAAE,IAAI,CACb,aAAa,CAAE,IAAI,CACnB,WAAW,CAAE,eAAe,CAC7B"
+}

@@ -1,0 +1,1315 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css"/>-->
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <title>Michael Habib's Notebook</title>
+</head>
+<body>
+<header id="site-header" class="p-4">
+    <nav id="primary-navigation" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="/">notebook.michaelhabib.name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /wiki/">Wiki</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /blog">Blog</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /posts/">Posts</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /categories/">Categories</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<!--    <div class="container shadow-sm p-4 mb-5 bg-warning">
+
+    <ul>
+        <li>Title : Wordpress Developer Guide</li>
+        <li>Type : </li>
+        <li>Layout : default</li>
+        <li>Collection : wiki</li>
+        <li>path : _wiki/information-technology/software/web/cms/wordpress/wordpress-developer-guide.adoc</li>
+        <li><a href="/information-technology/software/web/cms/wordpress/wordpress-developer-guide.html">Page URL : /information-technology/software/web/cms/wordpress/wordpress-developer-guide.html</a></li>
+        <li>
+            Categories :
+            <ul>
+                
+
+            </ul>
+        </li>
+        <li>
+            Entry: <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#what-is-wordpress-aka-wp">What is Wordpress (AKA WP)</a></li>
+<li><a href="#useful-links">Useful Links</a></li>
+<li><a href="#recommended-themes">Recommended Themes</a></li>
+<li><a href="#recommended-plugins">Recommended Plugins</a></li>
+<li><a href="#recommended-themes-plugins-marketplaces">Recommended Themes &amp; Plugins Marketplaces</a></li>
+<li><a href="#working-with-wp-cli-wordpress-command-line-interface">Working with WP CLI (WordPress Command Line Interface)</a></li>
+<li><a href="#wordpress-coding-standards">WordPress Coding Standards</a></li>
+<li><a href="#how-to-create-a-wp-plugin">How to Create a WP Plugin?</a></li>
+<li><a href="#how-to-create-a-wp-theme">How to Create a WP Theme ?</a></li>
+<li><a href="#wp-configuration">WP Configuration</a></li>
+<li><a href="#wp-rest-api">WP REST API</a></li>
+<li><a href="#understanding-wp-action-filter-hooks">Understanding WP Action &amp; Filter Hooks</a></li>
+<li><a href="#wp-optimisation">WP Optimisation</a></li>
+<li><a href="#wp-mysql-code-samples">WP &amp; MySQL Code Samples</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="what-is-wordpress-aka-wp">What is Wordpress (AKA WP)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WordPress (WordPress.org) is a content management system (CMS) written in PHP &#8230;&#8203;  <a href="https://en.wikipedia.org/wiki/WordPress">Source : Wikipidia</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="useful-links">Useful Links</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="general-information">General Information</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wordpress.org/">Project website : Wordpress.org</a></p>
+</li>
+<li>
+<p><a href="https://wordpress.org/support/">Wordpress Documentation</a></p>
+</li>
+<li>
+<p><a href="https://developer.wordpress.org/">WordPress Developer Documentation</a></p>
+</li>
+<li>
+<p><a href="https://profiles.wordpress.org/michaelhabib16#content-favorites">Michael habib&#8217;s Favorited items on wordpress.org</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repos-of-plugins-frameworks-not-listed-on-wordpress-marketplace">Repos of Plugins &amp; Frameworks (Not listed on WordPress marketplace)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jessuppi" class="bare">https://github.com/jessuppi</a></p>
+</li>
+<li>
+<p><a href="http://wppb.io/" class="bare">http://wppb.io/</a></p>
+</li>
+<li>
+<p><a href="https://roots.io/sage/">Sage - WordPress starter theme with a modern development workflow</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommended-themes">Recommended Themes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="sage-theme-framework-free">Sage Theme Framework (Free)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Aimed at developers.</p>
+</li>
+<li>
+<p>Sage is a WordPress starter theme with a modern development workflow.</p>
+</li>
+<li>
+<p><a href="https://github.com/roots/sage" class="bare">https://github.com/roots/sage</a></p>
+</li>
+<li>
+<p>Sass for stylesheets</p>
+</li>
+<li>
+<p>Modern JavaScript</p>
+</li>
+<li>
+<p>Webpack for compiling assets, optimizing images, and concatenating and minifying files</p>
+</li>
+<li>
+<p>Browsersync for synchronized browser testing</p>
+</li>
+<li>
+<p>Blade as a templating engine</p>
+</li>
+<li>
+<p>Controller for passing data to Blade templates</p>
+</li>
+<li>
+<p>CSS framework (optional): Bootstrap 4, Bulma, Foundation, Tachyons, Tailwind</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="siteorigin-vantage-freemium">SiteOrigin Vantage (Freemium)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Works well with SiteOrigin Page Builder</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="avada-paid">Avada (Paid)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Priced at $60 with over 300,000 sales. (ToDo) Test &amp; Provide more info.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="components-underscores-me-theme-generator-by-wp">Components.underscores.me theme generator by WP</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Aimed at developers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="understrap-underscores-starter-theme-bootstrap-free">UnderStrap: Underscores starter theme + Bootstrap (Free)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Aimed at developers.</p>
+</li>
+<li>
+<p>Has a sample child theme to get started quickly.</p>
+</li>
+<li>
+<p>Aimed at developers and does not include pretty css for production sites.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommended-plugins">Recommended Plugins</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Listed in a WP CLI command below for now.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommended-themes-plugins-marketplaces">Recommended Themes &amp; Plugins Marketplaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="elegent-themes">Elegent Themes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Pricing : $250 USD lifetime access &amp; updates. Other options available.</p>
+</li>
+<li>
+<p>Included Themes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Divi Theme</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Included Plugins</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bloom</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Third Party Elegant Themes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.divithemeexamples.com/divi-layouts/" class="bare">http://www.divithemeexamples.com/divi-layouts/</a></p>
+</li>
+<li>
+<p><a href="http://www.divithemeexamples.com/divi-showcase-category/free-divi-child-themes/" class="bare">http://www.divithemeexamples.com/divi-showcase-category/free-divi-child-themes/</a></p>
+</li>
+<li>
+<p><a href="https://divi.space/" class="bare">https://divi.space/</a></p>
+</li>
+<li>
+<p><a href="https://elegantdivilayouts.com/" class="bare">https://elegantdivilayouts.com/</a></p>
+</li>
+<li>
+<p><a href="http://divicreative.com" class="bare">http://divicreative.com</a></p>
+</li>
+<li>
+<p><a href="https://divicake.com/" class="bare">https://divicake.com/</a></p>
+</li>
+<li>
+<p><a href="https://besuperfly.com/shop/" class="bare">https://besuperfly.com/shop/</a></p>
+</li>
+<li>
+<p><a href="https://quiroz.co/divi-tutorials-much/divi-layout-kits/" class="bare">https://quiroz.co/divi-tutorials-much/divi-layout-kits/</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wpmudev-plugins-freemium">WPMUDEV Plugins (Freemium)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Smush</p>
+</li>
+<li>
+<p>HummingBird</p>
+</li>
+<li>
+<p>Defender</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="yi-themes">YI Themes</h3>
+<div class="paragraph">
+<p><a href="https://yithemes.com/" class="bare">https://yithemes.com/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="httpsthemefuse-com-premium"><a href="https://themefuse.com" class="bare">https://themefuse.com</a> (premium)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Pricing: $250 life time access &amp; updates. Other options available.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="working-with-wp-cli-wordpress-command-line-interface">Working with WP CLI (WordPress Command Line Interface)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="setting-file-permission">Setting File permission</h3>
+<div class="paragraph">
+<p>The recommended file permissions are  <code>755</code> for folders &amp; <code>644</code> for files.</p>
+</div>
+<div class="paragraph">
+<p>To correct WordPress file permission, you can run the following commands in the terminal at the root level of the project (Usually <code>public_html/</code>)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>find . -type d -exec chmod 755 {} +
+find . -type f -exec chmod 644 {} +</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wp-cli-commands">WP CLI Commands</h3>
+<div class="paragraph">
+<p><a href="https://developer.wordpress.org/cli/commands/" class="bare">https://developer.wordpress.org/cli/commands/</a></p>
+</div>
+<div class="listingblock">
+<div class="title">Download WP using WP CLI</div>
+<div class="content">
+<pre>wp core download</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Install recommended plugins using WP CLI</div>
+<div class="content">
+<pre>wp plugin install \
+classic-editor \
+shortcodes-ultimate \
+worker \
+duplicate-post \
+easy-wp-smtp \
+contact-form-7 \
+flamingo \
+simple-image-sizes \
+wordpress-seo \
+updraftplus \
+duplicator \
+wp-force-login
+
+wp plugin install \
+wp-smushit \
+hummingbird-performance \
+defender-security \
+smartcrawl-seo
+
+wp plugin install \
+user-role-editor \
+query-monitor
+
+wp plugin install \
+woocommerce
+
+# Alternitaves
+wp plugin install custom-sidebars
+wp plugin install cc-child-pages
+wp plugin install imagemagick-engine
+wp plugin install post-smtp
+wp plugin install w3-total-cache</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Generate pages using WP CLI</div>
+<div class="content">
+<pre>wp post create --post_type=page --post_status="publish" --post_title="Home"
+wp post create --post_type=page --post_status="publish" --post_title="About"
+wp post create --post_type=page --post_status="publish" --post_title="Contact"
+wp post create --post_type=page --post_status="publish" --post_title="Services"
+wp post create --post_type=page --post_status="publish" --post_title="Terms &amp; Conditions"
+wp post create --post_type=page --post_status="publish" --post_title="Privacy Policy"</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Create menus using WP CLI</div>
+<div class="content">
+<pre>wp menu create "Primary Menu"
+wp menu location assign primary-menu primary
+wp menu create "Secondary Menu"
+wp menu create "Sidebar Menu"
+wp menu create "Footer Menu"</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wordpress-coding-standards">WordPress Coding Standards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Moved to <code>programming/conventions/</code> folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-create-a-wp-plugin">How to Create a WP Plugin?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="sample-plugin">Sample Plugin</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a file under WP root <code>/wp-content/plugins/my-plugin-name/my-plugin-name.php</code></p>
+</li>
+<li>
+<p>Add then modify the following code as needed</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">&lt;?php
+
+/**
+ * Plugin Name: MyPluginName
+ * Plugin URI: mypluginname.com
+ * Description: myplugindescription
+ * Version: 0.1.0
+ * Author: My Name
+ * Author URI: https://mywebsite.com
+ * */
+
+// Function containing my code
+function my_plugin_name__function_name(){
+
+}
+
+add_action('plugins_loaded', 'my_plugin_name__function_name');</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-create-a-wp-theme">How to Create a WP Theme ?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="useful-links-2">Useful Links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://codex.wordpress.org/Theme_Development" class="bare">https://codex.wordpress.org/Theme_Development</a></p>
+</li>
+<li>
+<p><a href="https://codex.wordpress.org/Site_Design_and_Layout" class="bare">https://codex.wordpress.org/Site_Design_and_Layout</a></p>
+</li>
+<li>
+<p><a href="https://codex.wordpress.org/Child_Themes" class="bare">https://codex.wordpress.org/Child_Themes</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-configuration">WP Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="sample-wp-config-php">Sample <code>wp-config.php</code></h3>
+<div class="paragraph">
+<p>Note: Configs below used in test environment, it&#8217;s highly recommended you change them as needed for live websites.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">// Load test environment config based on requested domain, else load SAFE live site config
+if (
+	key_exists('HTTP_HOST', $_SERVER) &amp;&amp;
+   (($_SERVER['HTTP_HOST'] == "testing-domain.example.com.com") ||
+	!($_SERVER['SERVER_ADDR']))
+) {
+define('WP_SITEURL', 'https://example.com');
+define('WP_HOME', WP_SITEURL);
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DISABLE_FATAL_ERROR_HANDLER', false);
+define('SCRIPT_DEBUG', true);
+define('DISALLOW_FILE_EDIT', false);
+define('DISALLOW_FILE_MODS', false);
+ini_set('display_errors', 1);
+
+}else{
+// Load SAFE live site config .
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="control-wp-updates-notifications">Control WP Updates Notifications</h3>
+<div class="paragraph">
+<p>Add the following code to your <strong>theme or plugin</strong> to disable successful update notifications.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">add_filter( 'auto_core_update_send_email', 'wpb_stop_auto_update_emails', 10, 4 );
+
+function wpb_stop_update_emails( $send, $type, $core_update, $result ) {
+if ( ! empty( $type ) &amp;&amp; $type == 'success' ) {
+return false;
+}
+return true;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wp-settings">WP Settings</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Pretty URL</p>
+</li>
+<li>
+<p>Disable comments or at least limit them to loggin users till anti spam measures are taken.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-rest-api">WP REST API</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="links">Links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://developer.wordpress.org/rest-api" class="bare">https://developer.wordpress.org/rest-api</a></p>
+</li>
+<li>
+<p><a href="https://developer.wordpress.org/rest-api/reference/posts/" class="bare">https://developer.wordpress.org/rest-api/reference/posts/</a></p>
+</li>
+<li>
+<p>Custom Routes: <a href="https://developer.wordpress.org/reference/functions/register_rest_route/" class="bare">https://developer.wordpress.org/reference/functions/register_rest_route/</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="code-samples">Code Samples</h3>
+<div class="listingblock">
+<div class="content">
+<pre>example.com/wp-json/wp/v2/posts?per_page=3&amp;orderby=date&amp;order=desc&amp;status=publish</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="understanding-wp-action-filter-hooks">Understanding WP Action &amp; Filter Hooks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="useful-links-3">Useful Links</h3>
+<div class="paragraph">
+<p><a href="https://adambrown.info/p/wp_hooks/hook" class="bare">https://adambrown.info/p/wp_hooks/hook</a>
+<a href="https://codex.wordpress.org/Plugin_API/Action_Reference" class="bare">https://codex.wordpress.org/Plugin_API/Action_Reference</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commonly-used-action-hooks">Commonly used action hooks.</h3>
+<div class="listingblock">
+<div class="content">
+<pre>muplugins_loaded
+plugin_loaded`
+init
+wp_loaded
+wp</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commonly-used-filter-hooks">Commonly used filter hooks.</h3>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-optimisation">WP Optimisation</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use PHP 7.2 with Opcache</p>
+</li>
+<li>
+<p>GZip</p>
+</li>
+<li>
+<p>Convert images to .webp</p>
+</li>
+<li>
+<p>Image lazy loading</p>
+</li>
+<li>
+<p>Long term file cache by adding expiry headers.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-mysql-code-samples">WP &amp; MySQL Code Samples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="change-wp-site-url">Change WP Site URL</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-mysql" data-lang="mysql">SET @search := 'https://oldurl.com';
+SET @replace := 'https://newurl.com';
+
+UPDATE wp_options SET option_value = replace(option_value, @search, @replace) WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_posts SET guid = replace(guid, @search, @replace);
+UPDATE wp_posts SET post_content = replace(post_content,@search, @replace);
+UPDATE wp_postmeta SET meta_value = replace(meta_value,@search, @replace);
+
+# ----
+
+UPDATE wp_options SET option_value = replace(option_value, 'oldurl.com', 'newurl.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_posts SET guid = replace(guid, 'oldurl.com','newurl.com');
+UPDATE wp_posts SET post_content = replace(post_content, 'oldurl.com', 'newurl.com');
+UPDATE wp_postmeta SET meta_value = replace(meta_value,'oldurl.com','newurl.com');</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+        </li>
+        </li>
+
+    </ul>
+</div>
+-->
+
+</header>
+<div class="container-fluid">
+    <div class="container shadow-lg">
+        <div class="row">
+
+
+            <main id="site-main" class="col-md-12 col-lg-12 bg-light shadow-lg pt-4 pb-4 ">
+                <h1 class="p-4 page-title">Wordpress Developer Guide</h1>
+                <div class="container">
+                    <div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#what-is-wordpress-aka-wp">What is Wordpress (AKA WP)</a></li>
+<li><a href="#useful-links">Useful Links</a></li>
+<li><a href="#recommended-themes">Recommended Themes</a></li>
+<li><a href="#recommended-plugins">Recommended Plugins</a></li>
+<li><a href="#recommended-themes-plugins-marketplaces">Recommended Themes &amp; Plugins Marketplaces</a></li>
+<li><a href="#working-with-wp-cli-wordpress-command-line-interface">Working with WP CLI (WordPress Command Line Interface)</a></li>
+<li><a href="#wordpress-coding-standards">WordPress Coding Standards</a></li>
+<li><a href="#how-to-create-a-wp-plugin">How to Create a WP Plugin?</a></li>
+<li><a href="#how-to-create-a-wp-theme">How to Create a WP Theme ?</a></li>
+<li><a href="#wp-configuration">WP Configuration</a></li>
+<li><a href="#wp-rest-api">WP REST API</a></li>
+<li><a href="#understanding-wp-action-filter-hooks">Understanding WP Action &amp; Filter Hooks</a></li>
+<li><a href="#wp-optimisation">WP Optimisation</a></li>
+<li><a href="#wp-mysql-code-samples">WP &amp; MySQL Code Samples</a></li>
+</ul>
+</div>
+<div class="sect1">
+<h2 id="what-is-wordpress-aka-wp">What is Wordpress (AKA WP)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WordPress (WordPress.org) is a content management system (CMS) written in PHP &#8230;&#8203;  <a href="https://en.wikipedia.org/wiki/WordPress">Source : Wikipidia</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="useful-links">Useful Links</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="general-information">General Information</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://wordpress.org/">Project website : Wordpress.org</a></p>
+</li>
+<li>
+<p><a href="https://wordpress.org/support/">Wordpress Documentation</a></p>
+</li>
+<li>
+<p><a href="https://developer.wordpress.org/">WordPress Developer Documentation</a></p>
+</li>
+<li>
+<p><a href="https://profiles.wordpress.org/michaelhabib16#content-favorites">Michael habib&#8217;s Favorited items on wordpress.org</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="repos-of-plugins-frameworks-not-listed-on-wordpress-marketplace">Repos of Plugins &amp; Frameworks (Not listed on WordPress marketplace)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/jessuppi" class="bare">https://github.com/jessuppi</a></p>
+</li>
+<li>
+<p><a href="http://wppb.io/" class="bare">http://wppb.io/</a></p>
+</li>
+<li>
+<p><a href="https://roots.io/sage/">Sage - WordPress starter theme with a modern development workflow</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommended-themes">Recommended Themes</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="sage-theme-framework-free">Sage Theme Framework (Free)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Aimed at developers.</p>
+</li>
+<li>
+<p>Sage is a WordPress starter theme with a modern development workflow.</p>
+</li>
+<li>
+<p><a href="https://github.com/roots/sage" class="bare">https://github.com/roots/sage</a></p>
+</li>
+<li>
+<p>Sass for stylesheets</p>
+</li>
+<li>
+<p>Modern JavaScript</p>
+</li>
+<li>
+<p>Webpack for compiling assets, optimizing images, and concatenating and minifying files</p>
+</li>
+<li>
+<p>Browsersync for synchronized browser testing</p>
+</li>
+<li>
+<p>Blade as a templating engine</p>
+</li>
+<li>
+<p>Controller for passing data to Blade templates</p>
+</li>
+<li>
+<p>CSS framework (optional): Bootstrap 4, Bulma, Foundation, Tachyons, Tailwind</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="siteorigin-vantage-freemium">SiteOrigin Vantage (Freemium)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Works well with SiteOrigin Page Builder</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="avada-paid">Avada (Paid)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Priced at $60 with over 300,000 sales. (ToDo) Test &amp; Provide more info.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="components-underscores-me-theme-generator-by-wp">Components.underscores.me theme generator by WP</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Aimed at developers.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="understrap-underscores-starter-theme-bootstrap-free">UnderStrap: Underscores starter theme + Bootstrap (Free)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Aimed at developers.</p>
+</li>
+<li>
+<p>Has a sample child theme to get started quickly.</p>
+</li>
+<li>
+<p>Aimed at developers and does not include pretty css for production sites.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommended-plugins">Recommended Plugins</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Listed in a WP CLI command below for now.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="recommended-themes-plugins-marketplaces">Recommended Themes &amp; Plugins Marketplaces</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="elegent-themes">Elegent Themes</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Pricing : $250 USD lifetime access &amp; updates. Other options available.</p>
+</li>
+<li>
+<p>Included Themes</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Divi Theme</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Included Plugins</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Bloom</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Third Party Elegant Themes:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://www.divithemeexamples.com/divi-layouts/" class="bare">http://www.divithemeexamples.com/divi-layouts/</a></p>
+</li>
+<li>
+<p><a href="http://www.divithemeexamples.com/divi-showcase-category/free-divi-child-themes/" class="bare">http://www.divithemeexamples.com/divi-showcase-category/free-divi-child-themes/</a></p>
+</li>
+<li>
+<p><a href="https://divi.space/" class="bare">https://divi.space/</a></p>
+</li>
+<li>
+<p><a href="https://elegantdivilayouts.com/" class="bare">https://elegantdivilayouts.com/</a></p>
+</li>
+<li>
+<p><a href="http://divicreative.com" class="bare">http://divicreative.com</a></p>
+</li>
+<li>
+<p><a href="https://divicake.com/" class="bare">https://divicake.com/</a></p>
+</li>
+<li>
+<p><a href="https://besuperfly.com/shop/" class="bare">https://besuperfly.com/shop/</a></p>
+</li>
+<li>
+<p><a href="https://quiroz.co/divi-tutorials-much/divi-layout-kits/" class="bare">https://quiroz.co/divi-tutorials-much/divi-layout-kits/</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wpmudev-plugins-freemium">WPMUDEV Plugins (Freemium)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Smush</p>
+</li>
+<li>
+<p>HummingBird</p>
+</li>
+<li>
+<p>Defender</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="yi-themes">YI Themes</h3>
+<div class="paragraph">
+<p><a href="https://yithemes.com/" class="bare">https://yithemes.com/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="httpsthemefuse-com-premium"><a href="https://themefuse.com" class="bare">https://themefuse.com</a> (premium)</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Pricing: $250 life time access &amp; updates. Other options available.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="working-with-wp-cli-wordpress-command-line-interface">Working with WP CLI (WordPress Command Line Interface)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="setting-file-permission">Setting File permission</h3>
+<div class="paragraph">
+<p>The recommended file permissions are  <code>755</code> for folders &amp; <code>644</code> for files.</p>
+</div>
+<div class="paragraph">
+<p>To correct WordPress file permission, you can run the following commands in the terminal at the root level of the project (Usually <code>public_html/</code>)</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>find . -type d -exec chmod 755 {} +
+find . -type f -exec chmod 644 {} +</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wp-cli-commands">WP CLI Commands</h3>
+<div class="paragraph">
+<p><a href="https://developer.wordpress.org/cli/commands/" class="bare">https://developer.wordpress.org/cli/commands/</a></p>
+</div>
+<div class="listingblock">
+<div class="title">Download WP using WP CLI</div>
+<div class="content">
+<pre>wp core download</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Install recommended plugins using WP CLI</div>
+<div class="content">
+<pre>wp plugin install \
+classic-editor \
+shortcodes-ultimate \
+worker \
+duplicate-post \
+easy-wp-smtp \
+contact-form-7 \
+flamingo \
+simple-image-sizes \
+wordpress-seo \
+updraftplus \
+duplicator \
+wp-force-login
+
+wp plugin install \
+wp-smushit \
+hummingbird-performance \
+defender-security \
+smartcrawl-seo
+
+wp plugin install \
+user-role-editor \
+query-monitor
+
+wp plugin install \
+woocommerce
+
+# Alternitaves
+wp plugin install custom-sidebars
+wp plugin install cc-child-pages
+wp plugin install imagemagick-engine
+wp plugin install post-smtp
+wp plugin install w3-total-cache</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Generate pages using WP CLI</div>
+<div class="content">
+<pre>wp post create --post_type=page --post_status="publish" --post_title="Home"
+wp post create --post_type=page --post_status="publish" --post_title="About"
+wp post create --post_type=page --post_status="publish" --post_title="Contact"
+wp post create --post_type=page --post_status="publish" --post_title="Services"
+wp post create --post_type=page --post_status="publish" --post_title="Terms &amp; Conditions"
+wp post create --post_type=page --post_status="publish" --post_title="Privacy Policy"</pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Create menus using WP CLI</div>
+<div class="content">
+<pre>wp menu create "Primary Menu"
+wp menu location assign primary-menu primary
+wp menu create "Secondary Menu"
+wp menu create "Sidebar Menu"
+wp menu create "Footer Menu"</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wordpress-coding-standards">WordPress Coding Standards</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Moved to <code>programming/conventions/</code> folder.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-create-a-wp-plugin">How to Create a WP Plugin?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="sample-plugin">Sample Plugin</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Create a file under WP root <code>/wp-content/plugins/my-plugin-name/my-plugin-name.php</code></p>
+</li>
+<li>
+<p>Add then modify the following code as needed</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">&lt;?php
+
+/**
+ * Plugin Name: MyPluginName
+ * Plugin URI: mypluginname.com
+ * Description: myplugindescription
+ * Version: 0.1.0
+ * Author: My Name
+ * Author URI: https://mywebsite.com
+ * */
+
+// Function containing my code
+function my_plugin_name__function_name(){
+
+}
+
+add_action('plugins_loaded', 'my_plugin_name__function_name');</code></pre>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="how-to-create-a-wp-theme">How to Create a WP Theme ?</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="useful-links-2">Useful Links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://codex.wordpress.org/Theme_Development" class="bare">https://codex.wordpress.org/Theme_Development</a></p>
+</li>
+<li>
+<p><a href="https://codex.wordpress.org/Site_Design_and_Layout" class="bare">https://codex.wordpress.org/Site_Design_and_Layout</a></p>
+</li>
+<li>
+<p><a href="https://codex.wordpress.org/Child_Themes" class="bare">https://codex.wordpress.org/Child_Themes</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-configuration">WP Configuration</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="sample-wp-config-php">Sample <code>wp-config.php</code></h3>
+<div class="paragraph">
+<p>Note: Configs below used in test environment, it&#8217;s highly recommended you change them as needed for live websites.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">// Load test environment config based on requested domain, else load SAFE live site config
+if (
+	key_exists('HTTP_HOST', $_SERVER) &amp;&amp;
+   (($_SERVER['HTTP_HOST'] == "testing-domain.example.com.com") ||
+	!($_SERVER['SERVER_ADDR']))
+) {
+define('WP_SITEURL', 'https://example.com');
+define('WP_HOME', WP_SITEURL);
+define('WP_DEBUG', true);
+define('WP_DEBUG_DISPLAY', true);
+define('WP_DEBUG_LOG', true);
+define('WP_DISABLE_FATAL_ERROR_HANDLER', false);
+define('SCRIPT_DEBUG', true);
+define('DISALLOW_FILE_EDIT', false);
+define('DISALLOW_FILE_MODS', false);
+ini_set('display_errors', 1);
+
+}else{
+// Load SAFE live site config .
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="control-wp-updates-notifications">Control WP Updates Notifications</h3>
+<div class="paragraph">
+<p>Add the following code to your <strong>theme or plugin</strong> to disable successful update notifications.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-php" data-lang="php">add_filter( 'auto_core_update_send_email', 'wpb_stop_auto_update_emails', 10, 4 );
+
+function wpb_stop_update_emails( $send, $type, $core_update, $result ) {
+if ( ! empty( $type ) &amp;&amp; $type == 'success' ) {
+return false;
+}
+return true;
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="wp-settings">WP Settings</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Enable Pretty URL</p>
+</li>
+<li>
+<p>Disable comments or at least limit them to loggin users till anti spam measures are taken.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-rest-api">WP REST API</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="links">Links</h3>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://developer.wordpress.org/rest-api" class="bare">https://developer.wordpress.org/rest-api</a></p>
+</li>
+<li>
+<p><a href="https://developer.wordpress.org/rest-api/reference/posts/" class="bare">https://developer.wordpress.org/rest-api/reference/posts/</a></p>
+</li>
+<li>
+<p>Custom Routes: <a href="https://developer.wordpress.org/reference/functions/register_rest_route/" class="bare">https://developer.wordpress.org/reference/functions/register_rest_route/</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="code-samples">Code Samples</h3>
+<div class="listingblock">
+<div class="content">
+<pre>example.com/wp-json/wp/v2/posts?per_page=3&amp;orderby=date&amp;order=desc&amp;status=publish</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="understanding-wp-action-filter-hooks">Understanding WP Action &amp; Filter Hooks</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="useful-links-3">Useful Links</h3>
+<div class="paragraph">
+<p><a href="https://adambrown.info/p/wp_hooks/hook" class="bare">https://adambrown.info/p/wp_hooks/hook</a>
+<a href="https://codex.wordpress.org/Plugin_API/Action_Reference" class="bare">https://codex.wordpress.org/Plugin_API/Action_Reference</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commonly-used-action-hooks">Commonly used action hooks.</h3>
+<div class="listingblock">
+<div class="content">
+<pre>muplugins_loaded
+plugin_loaded`
+init
+wp_loaded
+wp</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="commonly-used-filter-hooks">Commonly used filter hooks.</h3>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-optimisation">WP Optimisation</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Use PHP 7.2 with Opcache</p>
+</li>
+<li>
+<p>GZip</p>
+</li>
+<li>
+<p>Convert images to .webp</p>
+</li>
+<li>
+<p>Image lazy loading</p>
+</li>
+<li>
+<p>Long term file cache by adding expiry headers.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="wp-mysql-code-samples">WP &amp; MySQL Code Samples</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="change-wp-site-url">Change WP Site URL</h3>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-mysql" data-lang="mysql">SET @search := 'https://oldurl.com';
+SET @replace := 'https://newurl.com';
+
+UPDATE wp_options SET option_value = replace(option_value, @search, @replace) WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_posts SET guid = replace(guid, @search, @replace);
+UPDATE wp_posts SET post_content = replace(post_content,@search, @replace);
+UPDATE wp_postmeta SET meta_value = replace(meta_value,@search, @replace);
+
+# ----
+
+UPDATE wp_options SET option_value = replace(option_value, 'oldurl.com', 'newurl.com') WHERE option_name = 'home' OR option_name = 'siteurl';
+UPDATE wp_posts SET guid = replace(guid, 'oldurl.com','newurl.com');
+UPDATE wp_posts SET post_content = replace(post_content, 'oldurl.com', 'newurl.com');
+UPDATE wp_postmeta SET meta_value = replace(meta_value,'oldurl.com','newurl.com');</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+                </div>
+
+            </main>
+
+            <!--            <aside id="site-aside" class="col-md-4 col-lg-3 pt-2">-->
+
+            <!--            </aside>-->
+
+        </div>
+
+    </div>
+</div>
+
+<footer id="site-footer">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</footer>
+
+</body>

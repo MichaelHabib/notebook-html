@@ -1,0 +1,355 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css"/>-->
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <title>Michael Habib's Notebook</title>
+</head>
+<body>
+<header id="site-header" class="p-4">
+    <nav id="primary-navigation" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="/">notebook.michaelhabib.name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /wiki/">Wiki</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /blog">Blog</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /posts/">Posts</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /categories/">Categories</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<!--    <div class="container shadow-sm p-4 mb-5 bg-warning">
+
+    <ul>
+        <li>Title : Docker Guide</li>
+        <li>Type : </li>
+        <li>Layout : default</li>
+        <li>Collection : wiki</li>
+        <li>path : _wiki/information-technology/software/virtulization/docker/docker-guide.adoc</li>
+        <li><a href="/information-technology/software/virtulization/docker/docker-guide.html">Page URL : /information-technology/software/virtulization/docker/docker-guide.html</a></li>
+        <li>
+            Categories :
+            <ul>
+                
+
+            </ul>
+        </li>
+        <li>
+            Entry: <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://docs.docker.com/" class="bare">https://docs.docker.com/</a>
+<a href="https://docs.docker.com/engine/reference/run/" class="bare">https://docs.docker.com/engine/reference/run/</a>
+<a href="https://docker-curriculum.com/" class="bare">https://docker-curriculum.com/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="key-concepts">Key Concepts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An image is a blueprint to be used for creating container instances. Images are NOT ran directly, they&#8217;re only used for creating containers.</p>
+</li>
+<li>
+<p>A container is an instance of an image. Removing a container removes the instance only, but keeps the image available for future creation of new containers.</p>
+</li>
+<li>
+<p>Docker VS Docker-Compose
+<strong>
+</strong>
+<strong>
+</strong></p>
+</li>
+<li>
+<p>Docker <code>--volume</code> vs <code>--mount</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>--mount type=bind,source="$(pwd)",target=/app</code> : binds a local directory to the target location inside the container.</p>
+</li>
+<li>
+<p><code>--mount type=volume,source="$(pwd)",target=/app</code></p>
+</li>
+<li>
+<p><code>--volume="$PWD:/app"</code> : mounts the specified host folder at the specified container location.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker-examples"><code>Docker</code> Examples</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Code Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker run [options] &lt;image-name&gt; &lt;command&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create then start a container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">----
+docker run -i -t \
+-p 8080:4000 \
+--mount=type=bind,source="$(pwd)",target=/app \
+$Container_Name bash
+----
+- <code>-p 8080:4000</code> binds the container&#8217;s port <code>4000</code> to port <code>8080</code> on the host OS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker run --rm -it --name "new hello world container" hello-world:$version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--rm</code> removes the container when existed, <code>-it</code> attaches interactive tty into the container.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker start [options] &lt;container-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starts one or more stopped existing container by name or id.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`docker exec [OPTIONS] CONTAINER COMMAND `</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execute a command in an already running container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker exec -it $Container_Name bash</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Size}}\t{{.Status}}\t{{.CreatedAt}}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List all available containers with a custom format.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker rm $(docker ps -a -q -f status=exited)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete all exited/stopped containers .</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker-compose-examples"><code>Docker-Compose</code> Examples</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+</table>
+</div>
+</div>
+        </li>
+        </li>
+
+    </ul>
+</div>
+-->
+
+</header>
+<div class="container-fluid">
+    <div class="container shadow-lg">
+        <div class="row">
+
+
+            <main id="site-main" class="col-md-12 col-lg-12 bg-light shadow-lg pt-4 pb-4 ">
+                <h1 class="p-4 page-title">Docker Guide</h1>
+                <div class="container">
+                    <div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://docs.docker.com/" class="bare">https://docs.docker.com/</a>
+<a href="https://docs.docker.com/engine/reference/run/" class="bare">https://docs.docker.com/engine/reference/run/</a>
+<a href="https://docker-curriculum.com/" class="bare">https://docker-curriculum.com/</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="key-concepts">Key Concepts</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>An image is a blueprint to be used for creating container instances. Images are NOT ran directly, they&#8217;re only used for creating containers.</p>
+</li>
+<li>
+<p>A container is an instance of an image. Removing a container removes the instance only, but keeps the image available for future creation of new containers.</p>
+</li>
+<li>
+<p>Docker VS Docker-Compose
+<strong>
+</strong>
+<strong>
+</strong></p>
+</li>
+<li>
+<p>Docker <code>--volume</code> vs <code>--mount</code></p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>--mount type=bind,source="$(pwd)",target=/app</code> : binds a local directory to the target location inside the container.</p>
+</li>
+<li>
+<p><code>--mount type=volume,source="$(pwd)",target=/app</code></p>
+</li>
+<li>
+<p><code>--volume="$PWD:/app"</code> : mounts the specified host folder at the specified container location.</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker-examples"><code>Docker</code> Examples</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Pseudo Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+<th class="tableblock halign-left valign-top">Code Examples</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker run [options] &lt;image-name&gt; &lt;command&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Create then start a container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">----
+docker run -i -t \
+-p 8080:4000 \
+--mount=type=bind,source="$(pwd)",target=/app \
+$Container_Name bash
+----
+- <code>-p 8080:4000</code> binds the container&#8217;s port <code>4000</code> to port <code>8080</code> on the host OS</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker run --rm -it --name "new hello world container" hello-world:$version</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>--rm</code> removes the container when existed, <code>-it</code> attaches interactive tty into the container.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker start [options] &lt;container-name&gt;</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Starts one or more stopped existing container by name or id.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">`docker exec [OPTIONS] CONTAINER COMMAND `</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Execute a command in an already running container.</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker exec -it $Container_Name bash</code></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker ps -a --format "table {{.ID}}\t{{.Image}}\t{{.Size}}\t{{.Status}}\t{{.CreatedAt}}</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">List all available containers with a custom format.</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>docker rm $(docker ps -a -q -f status=exited)</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Delete all exited/stopped containers .</p></td>
+<td class="tableblock halign-left valign-top"></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect1">
+<h2 id="docker-compose-examples"><code>Docker-Compose</code> Examples</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+</table>
+</div>
+</div>
+
+                </div>
+
+            </main>
+
+            <!--            <aside id="site-aside" class="col-md-4 col-lg-3 pt-2">-->
+
+            <!--            </aside>-->
+
+        </div>
+
+    </div>
+</div>
+
+<footer id="site-footer">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</footer>
+
+</body>

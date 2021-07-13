@@ -1,0 +1,1261 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css"/>-->
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <title>Michael Habib's Notebook</title>
+</head>
+<body>
+<header id="site-header" class="p-4">
+    <nav id="primary-navigation" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="/">notebook.michaelhabib.name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /wiki/">Wiki</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /blog">Blog</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /posts/">Posts</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /categories/">Categories</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<!--    <div class="container shadow-sm p-4 mb-5 bg-warning">
+
+    <ul>
+        <li>Title : Git Guide</li>
+        <li>Type : </li>
+        <li>Layout : default</li>
+        <li>Collection : wiki</li>
+        <li>path : _wiki/information-technology/programming/version-control-systems/git-guide.adoc</li>
+        <li><a href="/information-technology/programming/version-control-systems/git-guide.html">Page URL : /information-technology/programming/version-control-systems/git-guide.html</a></li>
+        <li>
+            Categories :
+            <ul>
+                
+
+            </ul>
+        </li>
+        <li>
+            Entry: <div class="sect1">
+<h2 id="commonly-used-commands">Commonly Used Commands</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>git init &lt;dir&gt;
+git clone &lt;repoURL&gt;
+git config user.name &lt;name&gt;
+git add &lt;file or dir&gt;
+git commit -m "&lt;message&gt;"
+git commit --amend
+git tag -a TagName -m "TagMessage"</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="important-configurations">Important Configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use a global <code>.gitignore</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git config --global core.excludesfile ~/.config/git/.gitignore</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set Git User details:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git config --global user.name "Michael Habib"git st
+git config --global user.email 1233256+MichaelHabib@users.noreply.github.com
+git config --global push.default simple
+git config --global core.editor vim</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-samples">Command Samples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>git status &amp;&amp; git add -A &amp;&amp; git commit -a -m "updated &#8230;&#8203;" &amp;&amp; git push _origin _master</code></p>
+</div>
+<div class="paragraph">
+<p><code>git pull origin master --allow-unrelated-histories</code> Pull remote with unrelated histories into a local repo. (follow with <code>git push origin master -f</code> to force upload to remote.</p>
+</div>
+<div class="sect2">
+<h3 id="basic-snapshotting">Basic Snapshotting</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git status</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Check status</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git add [file-name.txt]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Add a file to the staging area</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git add -A</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Add all new and changed files to the staging area</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git commit -m "[commit message]"</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Commit changes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git rm -r [file-name.txt]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove a file (or folder)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git reset [file-name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove all files or specified file.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git rm -r --cached fileOrFolder</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Untrack file or folder.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="branching-merging">Branching &amp; Merging</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>List branches (the asterisk denotes the current branch)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch -a</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>List all branches (local and remote)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Create a new branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch -d [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete a branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin --delete [branchName]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete a remote branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout -b [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Create a new branch and switch to it</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout -b [branch name] origin/[branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Clone a remote branch from <code>origin</code> and switch to it</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Switch to a branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout -</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Switch to the branch last checked out</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout&#8201;&#8212;&#8201;[file-name.txt]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Discard changes to a file</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git merge [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Merge a branch into the active branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git merge [source branch] [target branch]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Merge a branch into a target branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git stash</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Stash the changes in a dirty working directory away</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git stash clear</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove all the stashed states</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="sharing-updating-projects">Sharing &amp; Updating Projects</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Push a branch to your remote repository</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push -u origin [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Push changes to remote repository (and remember the branch)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Push changes to remote repository (remembered branch)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin --delete [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete a remote branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git pull</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Update local repository to the newest commit</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git pull origin [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Pull changes from remote repository</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git remote add origin ssh://git@github.com/[username]/[repository-name].git</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Add a remote repository</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git remote set-url origin ssh://git@github.com/[username]/[repository-name].git</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Set a repository&#8217;s origin branch to SSH</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="tags-releases">Tags &amp; Releases</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Command</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Description</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git tag -a TagName -m "TagMessage"</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>add tag locally only</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push --tags</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>push all tags</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin &lt;tag_name&gt;</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>push a specific tag</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git tag -d TagName</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete <strong>local</strong> tag</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push --delete TagName</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete <strong>REMOTE</strong> tag</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="git-submudules">Git Submudules</h3>
+<div class="paragraph">
+<p>sample <code>.gitmodules</code> files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="more-about-git-submodules">More about Git Submodules</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.blog/2016-02-01-working-with-submodules/" class="bare">https://github.blog/2016-02-01-working-with-submodules/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="inspection-comparison">Inspection &amp; Comparison</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git log</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>View changes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git log --summary</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>View changes (detailed)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git diff [source branch] [target branch}</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Preview changes before merging</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scenarios">Scenarios</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="delete-repo-files">Delete repo files</h3>
+<div class="paragraph">
+<p>To remove any file or folder from a local or remote branch
+- run <code>git rm -r --cached LocalFileOrFolderName</code> to remove the files
+- commit then push to remote branch .
+This will remove the files but will <strong>NOT</strong> alter the repo history, which means the files will be accessable from previous commits &amp; branches .</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="global-gitignore-template">Global <code>.gitignore</code> Template</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre># gitignore Template by MichaelHabib
+# www.michaelhabib.name
+
+## Project Specific Rules
+##################################################
+**/node_modules_local
+**/vendor_local
+
+
+## IDE &amp; Dev Tools File to ignore
+##################################################
+
+**/nbproject
+**/*.sublime-*
+**/.project
+**/Vagrantfile
+**/.vagrant*
+**/.idea/
+
+## PHP files and folders
+##################################################
+
+**/vendor
+
+## Common developer tools
+##################################################
+
+**/composer.phar
+**/php-cs-fixer.phar
+**/scrutinizer.phar
+
+## Node &amp; Front-end Dev
+##################################################
+
+**/.sass-cache
+**/bower_components
+**/node_modules
+**/npm-debug.log
+
+## File-system cruft and temporary files
+##################################################
+
+**/.*.swp
+**/.buildpath
+**/.swp
+**/__*
+
+
+## OS generated files #
+##################################################
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+
+## Packages #
+##################################################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+**/*.7z
+**/*.dmg
+**/*.gz
+**/*.iso
+**/*.jar
+**/*.rar
+**/*.tar
+**/*.zip
+
+
+## Credit &amp; Sources
+## - https://gist.github.com/octocat/9257657
+## - https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="useful-links-sources">Useful Links &amp; Sources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gitignore.io : <a href="https://www.toptal.com/developers/gitignore" class="bare">https://www.toptal.com/developers/gitignore</a></p>
+</li>
+<li>
+<p><a href="https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395" class="bare">https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395</a></p>
+</li>
+<li>
+<p>Dynamic git message : <a href="https://stackoverflow.com/questions/35010953/how-to-automatically-generate-commit-message" class="bare">https://stackoverflow.com/questions/35010953/how-to-automatically-generate-commit-message</a></p>
+</li>
+<li>
+<p><a href="https://github.com/joshnh/Git-Commands/blob/master/README.md" class="bare">https://github.com/joshnh/Git-Commands/blob/master/README.md</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        </li>
+        </li>
+
+    </ul>
+</div>
+-->
+
+</header>
+<div class="container-fluid">
+    <div class="container shadow-lg">
+        <div class="row">
+
+
+            <main id="site-main" class="col-md-12 col-lg-12 bg-light shadow-lg pt-4 pb-4 ">
+                <h1 class="p-4 page-title">Git Guide</h1>
+                <div class="container">
+                    <div class="sect1">
+<h2 id="commonly-used-commands">Commonly Used Commands</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre>git init &lt;dir&gt;
+git clone &lt;repoURL&gt;
+git config user.name &lt;name&gt;
+git add &lt;file or dir&gt;
+git commit -m "&lt;message&gt;"
+git commit --amend
+git tag -a TagName -m "TagMessage"</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="important-configurations">Important Configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Use a global <code>.gitignore</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git config --global core.excludesfile ~/.config/git/.gitignore</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Set Git User details:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>git config --global user.name "Michael Habib"git st
+git config --global user.email 1233256+MichaelHabib@users.noreply.github.com
+git config --global push.default simple
+git config --global core.editor vim</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="command-samples">Command Samples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>git status &amp;&amp; git add -A &amp;&amp; git commit -a -m "updated &#8230;&#8203;" &amp;&amp; git push _origin _master</code></p>
+</div>
+<div class="paragraph">
+<p><code>git pull origin master --allow-unrelated-histories</code> Pull remote with unrelated histories into a local repo. (follow with <code>git push origin master -f</code> to force upload to remote.</p>
+</div>
+<div class="sect2">
+<h3 id="basic-snapshotting">Basic Snapshotting</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git status</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Check status</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git add [file-name.txt]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Add a file to the staging area</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git add -A</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Add all new and changed files to the staging area</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git commit -m "[commit message]"</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Commit changes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git rm -r [file-name.txt]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove a file (or folder)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git reset [file-name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove all files or specified file.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git rm -r --cached fileOrFolder</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Untrack file or folder.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="branching-merging">Branching &amp; Merging</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>List branches (the asterisk denotes the current branch)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch -a</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>List all branches (local and remote)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Create a new branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git branch -d [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete a branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin --delete [branchName]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete a remote branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout -b [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Create a new branch and switch to it</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout -b [branch name] origin/[branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Clone a remote branch from <code>origin</code> and switch to it</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Switch to a branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout -</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Switch to the branch last checked out</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git checkout&#8201;&#8212;&#8201;[file-name.txt]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Discard changes to a file</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git merge [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Merge a branch into the active branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git merge [source branch] [target branch]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Merge a branch into a target branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git stash</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Stash the changes in a dirty working directory away</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git stash clear</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Remove all the stashed states</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="sharing-updating-projects">Sharing &amp; Updating Projects</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Push a branch to your remote repository</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push -u origin [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Push changes to remote repository (and remember the branch)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Push changes to remote repository (remembered branch)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin --delete [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete a remote branch</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git pull</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Update local repository to the newest commit</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git pull origin [branch name]</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Pull changes from remote repository</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git remote add origin ssh://git@github.com/[username]/[repository-name].git</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Add a remote repository</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git remote set-url origin ssh://git@github.com/[username]/[repository-name].git</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Set a repository&#8217;s origin branch to SSH</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="tags-releases">Tags &amp; Releases</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Command</p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Description</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git tag -a TagName -m "TagMessage"</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>add tag locally only</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push --tags</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>push all tags</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push origin &lt;tag_name&gt;</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>push a specific tag</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git tag -d TagName</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete <strong>local</strong> tag</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git push --delete TagName</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Delete <strong>REMOTE</strong> tag</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="git-submudules">Git Submudules</h3>
+<div class="paragraph">
+<p>sample <code>.gitmodules</code> files</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="more-about-git-submodules">More about Git Submodules</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.blog/2016-02-01-working-with-submodules/" class="bare">https://github.blog/2016-02-01-working-with-submodules/</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="inspection-comparison">Inspection &amp; Comparison</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Command</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git log</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>View changes</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git log --summary</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>View changes (detailed)</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><code>git diff [source branch] [target branch}</code></p>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Preview changes before merging</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="scenarios">Scenarios</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="delete-repo-files">Delete repo files</h3>
+<div class="paragraph">
+<p>To remove any file or folder from a local or remote branch
+- run <code>git rm -r --cached LocalFileOrFolderName</code> to remove the files
+- commit then push to remote branch .
+This will remove the files but will <strong>NOT</strong> alter the repo history, which means the files will be accessable from previous commits &amp; branches .</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="global-gitignore-template">Global <code>.gitignore</code> Template</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre># gitignore Template by MichaelHabib
+# www.michaelhabib.name
+
+## Project Specific Rules
+##################################################
+**/node_modules_local
+**/vendor_local
+
+
+## IDE &amp; Dev Tools File to ignore
+##################################################
+
+**/nbproject
+**/*.sublime-*
+**/.project
+**/Vagrantfile
+**/.vagrant*
+**/.idea/
+
+## PHP files and folders
+##################################################
+
+**/vendor
+
+## Common developer tools
+##################################################
+
+**/composer.phar
+**/php-cs-fixer.phar
+**/scrutinizer.phar
+
+## Node &amp; Front-end Dev
+##################################################
+
+**/.sass-cache
+**/bower_components
+**/node_modules
+**/npm-debug.log
+
+## File-system cruft and temporary files
+##################################################
+
+**/.*.swp
+**/.buildpath
+**/.swp
+**/__*
+
+
+## OS generated files #
+##################################################
+**/.DS_Store
+**/.DS_Store?
+**/._*
+**/.Spotlight-V100
+**/.Trashes
+**/ehthumbs.db
+**/Thumbs.db
+
+## Packages #
+##################################################
+# it's better to unpack these files and commit the raw source
+# git has its own built in compression methods
+**/*.7z
+**/*.dmg
+**/*.gz
+**/*.iso
+**/*.jar
+**/*.rar
+**/*.tar
+**/*.zip
+
+
+## Credit &amp; Sources
+## - https://gist.github.com/octocat/9257657
+## - https://stackoverflow.com/questions/18393498/gitignore-all-the-ds-store-files-in-every-folder-and-subfolder</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="useful-links-sources">Useful Links &amp; Sources</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gitignore.io : <a href="https://www.toptal.com/developers/gitignore" class="bare">https://www.toptal.com/developers/gitignore</a></p>
+</li>
+<li>
+<p><a href="https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395" class="bare">https://itnext.io/become-a-git-pro-in-just-one-blog-a-thorough-guide-to-git-architecture-and-command-line-interface-93fbe9bdb395</a></p>
+</li>
+<li>
+<p>Dynamic git message : <a href="https://stackoverflow.com/questions/35010953/how-to-automatically-generate-commit-message" class="bare">https://stackoverflow.com/questions/35010953/how-to-automatically-generate-commit-message</a></p>
+</li>
+<li>
+<p><a href="https://github.com/joshnh/Git-Commands/blob/master/README.md" class="bare">https://github.com/joshnh/Git-Commands/blob/master/README.md</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                </div>
+
+            </main>
+
+            <!--            <aside id="site-aside" class="col-md-4 col-lg-3 pt-2">-->
+
+            <!--            </aside>-->
+
+        </div>
+
+    </div>
+</div>
+
+<footer id="site-footer">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</footer>
+
+</body>

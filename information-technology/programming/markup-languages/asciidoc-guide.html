@@ -1,0 +1,1223 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<!--    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.6.1/css/foundation.min.css"/>-->
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+    <title>Michael Habib's Notebook</title>
+</head>
+<body>
+<header id="site-header" class="p-4">
+    <nav id="primary-navigation" class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+
+        <a class="navbar-brand" href="/">notebook.michaelhabib.name</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /">Home</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /wiki/">Wiki</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /blog">Blog</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /posts/">Posts</a>
+                </li>
+                
+                <li class="nav-item">
+                    <a class="nav-link" href=" /categories/">Categories</a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</nav>
+<!--    <div class="container shadow-sm p-4 mb-5 bg-warning">
+
+    <ul>
+        <li>Title : AsciiDoc Guide</li>
+        <li>Type : </li>
+        <li>Layout : default</li>
+        <li>Collection : wiki</li>
+        <li>path : _wiki/information-technology/programming/markup-languages/asciidoc-guide.adoc</li>
+        <li><a href="/information-technology/programming/markup-languages/asciidoc-guide.html">Page URL : /information-technology/programming/markup-languages/asciidoc-guide.html</a></li>
+        <li>
+            Categories :
+            <ul>
+                
+
+            </ul>
+        </li>
+        <li>
+            Entry: <div class="sect1">
+<h2 id="about-asciidoc">About AsciiDoc</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="syntax">Syntax</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="document-options">Document Options</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:favicon: ./images/favicon/favicon.png</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Experimental Features such as UI Macros</div>
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:experimental:</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Numbered Headers</div>
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:sectnums:
+:sectnumlevels: 5</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Font Icons by Font Awesome</div>
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:icons: font</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="headers">Headers</h3>
+<div class="paragraph">
+<p>Use one or multiple <code>=</code> to indicate header level. The number of <code>=</code> characters indicate the header level , for example:  <code>==</code> indicates h2 while <code>===</code> indicates h3, and so on ..</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="paragraphs">Paragraphs</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>.Paragraph Optional Title
+Some text here.</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<div class="title">Paragraph-1 Optional Title</div>
+<p>Some text here.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>.Paragraph Optional Title
+ Add one space before line to create literal paragraph.</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
+<div class="title">Paragraph-2 Optional Title</div>
+<div class="content">
+<pre>Add one space before line to create literal paragraph.</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="blocks">Blocks</h3>
+
+</div>
+<div class="sect2">
+<h3 id="links">Links</h3>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/user-manual/#url" class="bare">https://asciidoctor.org/docs/user-manual/#url</a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>[[anchor-1]]
+Some text in paragraph 1
+&lt;&lt;anchor-1,Optinal Anchor-1 Title&gt;&gt;</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="anchor-1" class="paragraph">
+<p>Some text in paragraph 1</p>
+</div>
+<div class="paragraph">
+<p><a href="#anchor-1">Optinal Anchor-1 Title</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>anchor:anchor-2[]
+Some text in paragraph 2
+xref:anchor-2[Optinal Anchor-2 Title]</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="anchor-2"></a>
+Some text in paragraph 2</p>
+</div>
+<div class="paragraph">
+<p><a href="#anchor-2">Optinal Anchor-2 Title</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="lists">Lists</h3>
+<div class="sect3">
+<h4 id="unordered-lists">Unordered Lists</h4>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/user-manual/#unordered-lists" class="bare">https://asciidoctor.org/docs/user-manual/#unordered-lists</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use one or more <code>*</code> characters to indicate list item level.</p>
+</li>
+<li>
+<p>You can use <code>-</code> for top level list items only.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ordered-lists">Ordered Lists</h4>
+
+</div>
+<div class="sect3">
+<h4 id="labeled-lists">Labeled Lists</h4>
+<div class="paragraph">
+<p>Labeled lists are useful when you need to include a description or supporting text for each item in a list.
+<a href="https://asciidoctor.org/docs/user-manual/#labeled-list" class="bare">https://asciidoctor.org/docs/user-manual/#labeled-list</a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Title::
+    - List Item 1
+        ** Child Item 1.1
+    - List Item 2</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">Title</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>List Item 1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Child Item 1.1</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List Item 2</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Operating Systems::
+Linux:::
+. Fedora
+* Desktop
+. Ubuntu
+* Desktop
+* Server
+BSD:::
+. FreeBSD
+. NetBSD
+
+Cloud Providers::
+PaaS:::
+. OpenShift
+. CloudBees
+IaaS:::
+. Amazon EC2
+. Rackspace</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Operating Systems</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Linux</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fedora</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ubuntu</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop</p>
+</li>
+<li>
+<p>Server</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">BSD</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>FreeBSD</p>
+</li>
+<li>
+<p>NetBSD</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Cloud Providers</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">PaaS</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>OpenShift</p>
+</li>
+<li>
+<p>CloudBees</p>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">IaaS</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Amazon EC2</p>
+</li>
+<li>
+<p>Rackspace</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tables">Tables</h3>
+<div class="sect3">
+<h4 id="basic-table-structure">Basic Table Structure:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Table starts &amp; ends with <code>|===</code></p>
+</li>
+<li>
+<p>The first line is considered table header, leave empty if there are no table headers.</p>
+</li>
+<li>
+<p>Each  cell starts with a pipe ` | `.</p>
+</li>
+<li>
+<p>Columns can be places on one or multiple consecutive lines with no spaces in between.</p>
+</li>
+<li>
+<p>Rows can must have one or more white space between them.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cols-attribute"><code>[cols=""]</code> attribute:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>More columns formating info can be found at <a href="https://asciidoctor.org/docs/user-manual/#cols-format" class="bare">https://asciidoctor.org/docs/user-manual/#cols-format</a></p>
+</li>
+<li>
+<p>Number of values assigned to <code>[cols="1,2,3"]</code> indicates the number of columns.</p>
+</li>
+<li>
+<p>The values can be alignment instructions or styling information (ToDo: can they be both?). Available styles are : <code>d</code> for default paragraph formatting, <code>a</code> for AsciiDOc, <code>e</code> for Italicized text, <code>h</code> for header style, <code>l</code> for literal block formatting, <code>m</code> for monospaced content, <code>s</code> for bold text and <code>v</code> for verse styling.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="col-row-span">Col / Row Span</h3>
+<div class="listingblock">
+<div class="title">To span 2 columns and 1 row</div>
+<div class="content">
+<pre>2.1| ColContent</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ui-macros-experimental">UI Macros (Experimental)</h3>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/user-manual/#user-interface-macros" class="bare">https://asciidoctor.org/docs/user-manual/#user-interface-macros</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>kbd:[F11]
+menu:View[Zoom &gt; Reset]
+btn:[OK]
+icon:tags[role="blue",size=2x]
+icon:heart[role="red",size=fw,rotate=90, flip=vertical]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="includes">Includes</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>This is example how files
+can be included.
+It's commented because
+there no such files. :)
+
+ include::footer.txt[]
+ [source,perl]
+ include::script.pl[]</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>This is example how files
+can be included.
+It&#8217;s commented because
+there no such files. :)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="converter">Converter</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="converter-options">Converter Options</h3>
+<div class="paragraph">
+<p>All options can be found on the manpage by running <code>asciidoc --help manpage</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-f, --conf-file=CONF_FILE
+          Use configuration file CONF_FILE.Configuration files processed
+          in command-line order (after implicit configuration files). This
+          option may be specified more than once.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-s, --no-header-footer
+         Suppress document header and footer output.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-o, --out-file=OUT_FILE
+         Write output to file OUT_FILE. Defaults to the base name of
+         input file with backend extension. If the input is stdin then
+         the outfile defaults to stdout. If OUT_FILE is - then the
+         standard output is used.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-n, --section-numbers
+         Auto-number HTML article section titles. Synonym for --attribute
+         numbered.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>--theme=THEME
+         Specify a theme name. Synonym for --attribute theme=THEME. The
+         --theme option is also used to manage theme plugins (see
+         [3]PLUGIN COMMANDS).</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-css">Custom CSS</h2>
+<div class="sectionbody">
+<div class="paragraph custom-ui-macro-menu-css-v1">
+<div class="title">Custom UI Macros Menus Styles</div>
+<p>menu:Left Bar Menu[Tags &gt; New &gt; some]</p>
+</div>
+<div class="paragraph">
+<p>&lt;style&gt;
+.custom-ui-macro-menu-css-v1 .menuseq .menu,
+. custom-ui-macro-menu-css-v1.menuseq .submenu,
+.custom-ui-macro-menu-css-v1 .menuseq .menuitem{
+    padding: 5px;
+    border: 1px dotted #ddd;
+}
+.custom-ui-macro-menu-css-v1 .menuseq .menu{
+    background: hsl(20,20%,90%);
+}
+.custom-ui-macro-menu-css-v1 .menuseq .submenu{
+  background: hsl(200,20%,90%);
+}
+.custom-ui-macro-menu-css-v1 .menuseq .menuitem{
+  background: hsl(160,20%,90%);
+}</p>
+</div>
+<div class="paragraph">
+<p>&lt;/style&gt;
+&lt;style&gt;
+body{
+	background: #f9f9f9;
+}
+#content{
+    max-width: 1200px;
+}
+.sect1{
+	background: #f4f4f4;
+	padding: 20px;
+}
+.sect1+.sect1{
+	border-top: 1px solid #eee;
+}
+.sect2{
+	background: #fff;
+	padding: 20px;
+}
+.sect2+.sect2 {
+	border-top: 1px dotted #e5e5e5;
+}
+&lt;/style&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="useful-links">Useful Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>AsciiDoc Cheat Sheet: <a href="https://powerman.name/doc/asciidoc" class="bare">https://powerman.name/doc/asciidoc</a></p>
+</li>
+<li>
+<p>User manual : <a href="http://asciidoctor.org/docs/user-manual/" class="bare">http://asciidoctor.org/docs/user-manual/</a></p>
+</li>
+<li>
+<p>Built-in blocks summary : <a href="https://asciidoctor.org/docs/user-manual/#built-in-blocks-summary" class="bare">https://asciidoctor.org/docs/user-manual/#built-in-blocks-summary</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+        </li>
+        </li>
+
+    </ul>
+</div>
+-->
+
+</header>
+<div class="container-fluid">
+    <div class="container shadow-lg">
+        <div class="row">
+
+
+            <main id="site-main" class="col-md-12 col-lg-12 bg-light shadow-lg pt-4 pb-4 ">
+                <h1 class="p-4 page-title">AsciiDoc Guide</h1>
+                <div class="container">
+                    <div class="sect1">
+<h2 id="about-asciidoc">About AsciiDoc</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="syntax">Syntax</h2>
+<div class="sectionbody">
+
+</div>
+</div>
+<div class="sect1">
+<h2 id="document-options">Document Options</h2>
+<div class="sectionbody">
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:favicon: ./images/favicon/favicon.png</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Experimental Features such as UI Macros</div>
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:experimental:</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Numbered Headers</div>
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:sectnums:
+:sectnumlevels: 5</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="title">Font Icons by Font Awesome</div>
+<div class="content">
+<pre class="highlight"><code class="language-asciidoc" data-lang="asciidoc">:icons: font</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="headers">Headers</h3>
+<div class="paragraph">
+<p>Use one or multiple <code>=</code> to indicate header level. The number of <code>=</code> characters indicate the header level , for example:  <code>==</code> indicates h2 while <code>===</code> indicates h3, and so on ..</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="paragraphs">Paragraphs</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>.Paragraph Optional Title
+Some text here.</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<div class="title">Paragraph-1 Optional Title</div>
+<p>Some text here.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>.Paragraph Optional Title
+ Add one space before line to create literal paragraph.</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="literalblock">
+<div class="title">Paragraph-2 Optional Title</div>
+<div class="content">
+<pre>Add one space before line to create literal paragraph.</pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="blocks">Blocks</h3>
+
+</div>
+<div class="sect2">
+<h3 id="links">Links</h3>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/user-manual/#url" class="bare">https://asciidoctor.org/docs/user-manual/#url</a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>[[anchor-1]]
+Some text in paragraph 1
+&lt;&lt;anchor-1,Optinal Anchor-1 Title&gt;&gt;</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div id="anchor-1" class="paragraph">
+<p>Some text in paragraph 1</p>
+</div>
+<div class="paragraph">
+<p><a href="#anchor-1">Optinal Anchor-1 Title</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>anchor:anchor-2[]
+Some text in paragraph 2
+xref:anchor-2[Optinal Anchor-2 Title]</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p><a id="anchor-2"></a>
+Some text in paragraph 2</p>
+</div>
+<div class="paragraph">
+<p><a href="#anchor-2">Optinal Anchor-2 Title</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect2">
+<h3 id="lists">Lists</h3>
+<div class="sect3">
+<h4 id="unordered-lists">Unordered Lists</h4>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/user-manual/#unordered-lists" class="bare">https://asciidoctor.org/docs/user-manual/#unordered-lists</a></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Use one or more <code>*</code> characters to indicate list item level.</p>
+</li>
+<li>
+<p>You can use <code>-</code> for top level list items only.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="ordered-lists">Ordered Lists</h4>
+
+</div>
+<div class="sect3">
+<h4 id="labeled-lists">Labeled Lists</h4>
+<div class="paragraph">
+<p>Labeled lists are useful when you need to include a description or supporting text for each item in a list.
+<a href="https://asciidoctor.org/docs/user-manual/#labeled-list" class="bare">https://asciidoctor.org/docs/user-manual/#labeled-list</a></p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Code</th>
+<th class="tableblock halign-left valign-top">Output</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Title::
+    - List Item 1
+        ** Child Item 1.1
+    - List Item 2</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="dlist">
+<dl>
+<dt class="hdlist1">Title</dt>
+<dd>
+<div class="ulist">
+<ul>
+<li>
+<p>List Item 1</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Child Item 1.1</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>List Item 2</p>
+</li>
+</ul>
+</div>
+</dd>
+</dl>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>Operating Systems::
+Linux:::
+. Fedora
+* Desktop
+. Ubuntu
+* Desktop
+* Server
+BSD:::
+. FreeBSD
+. NetBSD
+
+Cloud Providers::
+PaaS:::
+. OpenShift
+. CloudBees
+IaaS:::
+. Amazon EC2
+. Rackspace</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="openblock">
+<div class="content">
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Operating Systems</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">Linux</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Fedora</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Ubuntu</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Desktop</p>
+</li>
+<li>
+<p>Server</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">BSD</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>FreeBSD</p>
+</li>
+<li>
+<p>NetBSD</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+<dt class="hdlist1">Cloud Providers</dt>
+<dd>
+<div class="dlist">
+<dl>
+<dt class="hdlist1">PaaS</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>OpenShift</p>
+</li>
+<li>
+<p>CloudBees</p>
+</li>
+</ol>
+</div>
+</dd>
+<dt class="hdlist1">IaaS</dt>
+<dd>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Amazon EC2</p>
+</li>
+<li>
+<p>Rackspace</p>
+</li>
+</ol>
+</div>
+</dd>
+</dl>
+</div>
+</dd>
+</dl>
+</div>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="tables">Tables</h3>
+<div class="sect3">
+<h4 id="basic-table-structure">Basic Table Structure:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>Table starts &amp; ends with <code>|===</code></p>
+</li>
+<li>
+<p>The first line is considered table header, leave empty if there are no table headers.</p>
+</li>
+<li>
+<p>Each  cell starts with a pipe ` | `.</p>
+</li>
+<li>
+<p>Columns can be places on one or multiple consecutive lines with no spaces in between.</p>
+</li>
+<li>
+<p>Rows can must have one or more white space between them.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="cols-attribute"><code>[cols=""]</code> attribute:</h4>
+<div class="ulist">
+<ul>
+<li>
+<p>More columns formating info can be found at <a href="https://asciidoctor.org/docs/user-manual/#cols-format" class="bare">https://asciidoctor.org/docs/user-manual/#cols-format</a></p>
+</li>
+<li>
+<p>Number of values assigned to <code>[cols="1,2,3"]</code> indicates the number of columns.</p>
+</li>
+<li>
+<p>The values can be alignment instructions or styling information (ToDo: can they be both?). Available styles are : <code>d</code> for default paragraph formatting, <code>a</code> for AsciiDOc, <code>e</code> for Italicized text, <code>h</code> for header style, <code>l</code> for literal block formatting, <code>m</code> for monospaced content, <code>s</code> for bold text and <code>v</code> for verse styling.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="col-row-span">Col / Row Span</h3>
+<div class="listingblock">
+<div class="title">To span 2 columns and 1 row</div>
+<div class="content">
+<pre>2.1| ColContent</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ui-macros-experimental">UI Macros (Experimental)</h3>
+<div class="paragraph">
+<p><a href="https://asciidoctor.org/docs/user-manual/#user-interface-macros" class="bare">https://asciidoctor.org/docs/user-manual/#user-interface-macros</a></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>kbd:[F11]
+menu:View[Zoom &gt; Reset]
+btn:[OK]
+icon:tags[role="blue",size=2x]
+icon:heart[role="red",size=fw,rotate=90, flip=vertical]</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="includes">Includes</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Code</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Output</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="listingblock">
+<div class="content">
+<pre>This is example how files
+can be included.
+It's commented because
+there no such files. :)
+
+ include::footer.txt[]
+ [source,perl]
+ include::script.pl[]</pre>
+</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>This is example how files
+can be included.
+It&#8217;s commented because
+there no such files. :)</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="converter">Converter</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="converter-options">Converter Options</h3>
+<div class="paragraph">
+<p>All options can be found on the manpage by running <code>asciidoc --help manpage</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-f, --conf-file=CONF_FILE
+          Use configuration file CONF_FILE.Configuration files processed
+          in command-line order (after implicit configuration files). This
+          option may be specified more than once.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-s, --no-header-footer
+         Suppress document header and footer output.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-o, --out-file=OUT_FILE
+         Write output to file OUT_FILE. Defaults to the base name of
+         input file with backend extension. If the input is stdin then
+         the outfile defaults to stdout. If OUT_FILE is - then the
+         standard output is used.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>-n, --section-numbers
+         Auto-number HTML article section titles. Synonym for --attribute
+         numbered.</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code>--theme=THEME
+         Specify a theme name. Synonym for --attribute theme=THEME. The
+         --theme option is also used to manage theme plugins (see
+         [3]PLUGIN COMMANDS).</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-css">Custom CSS</h2>
+<div class="sectionbody">
+<div class="paragraph custom-ui-macro-menu-css-v1">
+<div class="title">Custom UI Macros Menus Styles</div>
+<p>menu:Left Bar Menu[Tags &gt; New &gt; some]</p>
+</div>
+<div class="paragraph">
+<p>&lt;style&gt;
+.custom-ui-macro-menu-css-v1 .menuseq .menu,
+. custom-ui-macro-menu-css-v1.menuseq .submenu,
+.custom-ui-macro-menu-css-v1 .menuseq .menuitem{
+    padding: 5px;
+    border: 1px dotted #ddd;
+}
+.custom-ui-macro-menu-css-v1 .menuseq .menu{
+    background: hsl(20,20%,90%);
+}
+.custom-ui-macro-menu-css-v1 .menuseq .submenu{
+  background: hsl(200,20%,90%);
+}
+.custom-ui-macro-menu-css-v1 .menuseq .menuitem{
+  background: hsl(160,20%,90%);
+}</p>
+</div>
+<div class="paragraph">
+<p>&lt;/style&gt;
+&lt;style&gt;
+body{
+	background: #f9f9f9;
+}
+#content{
+    max-width: 1200px;
+}
+.sect1{
+	background: #f4f4f4;
+	padding: 20px;
+}
+.sect1+.sect1{
+	border-top: 1px solid #eee;
+}
+.sect2{
+	background: #fff;
+	padding: 20px;
+}
+.sect2+.sect2 {
+	border-top: 1px dotted #e5e5e5;
+}
+&lt;/style&gt;</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="useful-links">Useful Links</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>AsciiDoc Cheat Sheet: <a href="https://powerman.name/doc/asciidoc" class="bare">https://powerman.name/doc/asciidoc</a></p>
+</li>
+<li>
+<p>User manual : <a href="http://asciidoctor.org/docs/user-manual/" class="bare">http://asciidoctor.org/docs/user-manual/</a></p>
+</li>
+<li>
+<p>Built-in blocks summary : <a href="https://asciidoctor.org/docs/user-manual/#built-in-blocks-summary" class="bare">https://asciidoctor.org/docs/user-manual/#built-in-blocks-summary</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+
+                </div>
+
+            </main>
+
+            <!--            <aside id="site-aside" class="col-md-4 col-lg-3 pt-2">-->
+
+            <!--            </aside>-->
+
+        </div>
+
+    </div>
+</div>
+
+<footer id="site-footer">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+</footer>
+
+</body>
